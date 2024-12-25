@@ -3,11 +3,10 @@
 
 namespace gpio
 {
-    template <typename T>
-    class MockGPIO : public GPIO<T>
+    class MockGPIO : public GPIO
     {
     public:
-        MOCK_METHOD(int32_t, setup, (Pin pin, typename GPIO<T>::SignalEventCallback callback), (override));
+        MOCK_METHOD(int32_t, setup, (Pin pin, typename GPIO::SignalEventCallback callback), (override));
         MOCK_METHOD(int32_t, setDirection, (Pin pin, Direction direction), (override));
         MOCK_METHOD(int32_t, setOutputMode, (Pin pin, OutputMode mode), (override));
         MOCK_METHOD(int32_t, setPullResistor, (Pin pin, PullResistor resistor), (override));
@@ -19,7 +18,7 @@ namespace gpio
     class GPIOTest : public ::testing::Test
     {
     protected:
-        MockGPIO<int> mock_gpio; // Mock instance for testing
+        MockGPIO mock_gpio; // Mock instance for testing
     };
 
     // Test: Verify setup is called with the correct parameters
@@ -186,7 +185,7 @@ namespace gpio
 
         EXPECT_CALL(mock_gpio, setup(test_pin, ::testing::_))
             .Times(1)
-            .WillOnce(::testing::Invoke([&](Pin pin, GPIO<int>::SignalEventCallback cb)
+            .WillOnce(::testing::Invoke([&](Pin pin, GPIO::SignalEventCallback cb)
                                         {
             cb(pin, EventType::RisingEdge);
             return 0; }));

@@ -42,7 +42,6 @@ namespace gpio
         EitherEdge = (1UL << 2)   // Either edge detected
     };
 
-    template <typename T>
     class GPIO
     {
     public:
