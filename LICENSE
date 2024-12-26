@@ -2,6 +2,9 @@ MIT License
 
 Copyright (c) 2024 Shishir Dey
 
+This software is a derivative work based on code originally developed by ARM Software and available at:
+https://github.com/ARM-software/CMSIS_6
+
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
