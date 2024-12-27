@@ -1,5 +1,13 @@
 # cmsis-driver-cpp
 
+## Fetch Submodules
+
+Before building the project, ensure all submodules are initialized and updated:
+
+```
+git submodule update --init --recursive
+```
+
 ## Build Instructions
 
 To build the project, follow these steps:
