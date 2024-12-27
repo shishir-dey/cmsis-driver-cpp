@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <functional>
 
-namespace usart
+namespace cmsis
 {
     enum class Mode
     {

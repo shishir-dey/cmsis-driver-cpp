@@ -1,7 +1,7 @@
 #include <gmock/gmock.h>
 #include "GPIO.hpp"
 
-namespace gpio
+namespace cmsis
 {
     class MockGPIO : public GPIO
     {

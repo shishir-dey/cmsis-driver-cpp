@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <functional>
 
-namespace flash
+namespace cmsis
 {
 
     struct SectorInfo

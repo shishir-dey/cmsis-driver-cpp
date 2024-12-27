@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <functional>
 
-namespace i2c
+namespace cmsis
 {
     enum class BusSpeed
     {

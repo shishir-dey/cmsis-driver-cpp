@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <functional>
 
-namespace spi
+namespace cmsis
 {
     enum class Mode
     {

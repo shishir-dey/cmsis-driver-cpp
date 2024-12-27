@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <functional>
 
-namespace gpio
+namespace cmsis
 {
 
     using Pin = uint32_t;
